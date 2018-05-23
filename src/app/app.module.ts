@@ -11,6 +11,7 @@ import {AccountModule} from './modules/account/account.module';
 import {GeolocModule} from './modules/geoloc/geoloc.module';
 import {BarcodeModule} from './modules/barcode/barcode.module';
 import {ProductModule} from './modules/product/product.module';
+import {HashLocationStrategy, Location, LocationStrategy} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import {ProductModule} from './modules/product/product.module';
     ProductModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
