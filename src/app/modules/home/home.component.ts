@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  public title = 'Home';
+  public rightIcon = 'fas fa-search';
   constructor() { }
 
   ngOnInit() {

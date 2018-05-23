@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "../DemoPwa/node_modules/quagga/dist/quagga.min.js"
+            ]
           },
           "configurations": {
             "production": {
